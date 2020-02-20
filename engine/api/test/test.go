@@ -85,7 +85,7 @@ XeJEyyEjosSa3qWACDYorGMnzRXdeJa5H7J0W+G3x4tH2LMW8VHS
 
 // SetupPG setup PG DB for test
 func SetupPG(t log.Logger, bootstrapFunc ...Bootstrapf) (*gorp.DbMap, cache.Store, context.CancelFunc) {
-	log.SetLogger(t)
+	log.SetLogger(t, "ENGINE")
 	cfg := LoadTestingConf(t)
 	DBDriver = cfg["dbDriver"]
 	dbUser = cfg["dbUser"]
